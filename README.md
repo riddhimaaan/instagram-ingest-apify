@@ -8,7 +8,7 @@ to Notion via [Composio](https://composio.dev).
 Paste a link and ask, or use the explicit command:
 
 ```
-/ingest https://www.instagram.com/reel/XXXXXXXXX/
+/ingest-apify https://www.instagram.com/reel/XXXXXXXXX/
 ```
 
 > ### ⚠️ Before you install, you'll need three things
@@ -56,7 +56,7 @@ Paste a link and ask, or use the explicit command:
 **4. Point it at your Notion** → [`docs/NOTION.md`](docs/NOTION.md)
 (create the database, connect Notion in Composio, fill `config/notion.json`).
 
-**5. Run `/ingest <url>`** in Claude Code — the skill checks all of the above itself the
+**5. Run `/ingest-apify <url>`** in Claude Code — the skill checks all of the above itself the
 first time it runs, and tells you what's still missing, if anything. 🎉
 
 ### Option B — Let your AI install it for you
