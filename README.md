@@ -1,12 +1,14 @@
 # 📥 instagram-ingest-apify
 
-A **Claude Code plugin** that turns any Instagram **reel, post, or carousel** into a clean,
-formatted row in your **Notion** database — with **zero local installs**. Scraping and
+A single **Claude Code skill** that turns any Instagram **reel, post, or carousel** into a
+clean, formatted row in your **Notion** database — with **zero local installs**. Scraping and
 transcription run on [Apify](https://apify.com)'s cloud; Claude does the reading and writes
 to Notion via [Composio](https://composio.dev).
 
+No commands to remember — just paste a link:
+
 ```
-/ingest https://www.instagram.com/reel/XXXXXXXXX/
+Ingest this: https://www.instagram.com/reel/XXXXXXXXX/
 ```
 
 > ### ⚠️ Before you install, you'll need three things
@@ -54,10 +56,8 @@ to Notion via [Composio](https://composio.dev).
 **4. Point it at your Notion** → [`docs/NOTION.md`](docs/NOTION.md)
 (create the database, connect Notion in Composio, fill `config/notion.json`).
 
-**5. Run `/ig-setup`** in Claude Code — it checks all of the above and tells you what's
-still missing, if anything.
-
-All good? Run `/ingest <url>`. 🎉
+**5. Paste an Instagram link** in Claude Code — the skill checks all of the above itself the
+first time it runs, and tells you what's still missing, if anything. 🎉
 
 ### Option B — Let your AI install it for you
 
@@ -80,6 +80,10 @@ it connects Apify and Composio, then walks you through the two things only you c
 | Frames *(fallback)* | Apify | ffmpeg samples frames, only when a reel has no transcript |
 | Extract | *(the `ig-ingest` skill, local)* | Claude reads the transcript / materialized images and pulls the verbatim text |
 | Save | Composio `NOTION_INSERT_ROW_DATABASE` | one formatted row: link in properties, content in the page body |
+
+This is a **single skill**, not a set of commands — the whole flow (first-time setup check,
+scrape, analyze, save) is one `skills/ig-ingest/SKILL.md` that Claude follows automatically
+whenever you paste an Instagram link.
 
 The Actor's source lives at [riddhimaaan/instagram-ingest-scraper](https://github.com/riddhimaaan/instagram-ingest-scraper)
 — you don't need to look at it to use this plugin, it's just the thing running on Apify.

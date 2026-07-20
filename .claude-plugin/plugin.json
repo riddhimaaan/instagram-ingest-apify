@@ -1,7 +1,7 @@
 {
   "name": "instagram-ingest-apify",
   "version": "0.1.0",
-  "description": "Requires an Apify account (Apify MCP connected), the Composio MCP server connected to Notion, and your own Instagram cookies (docs/COOKIES.md) — /ig-setup walks you through all three. Give it an Instagram reel/post/carousel URL: the scraping + transcription happens on Apify (no local installs at all — no ffmpeg, no Python venv, no WSL), then Claude extracts the real text and saves a clean, formatted row to your Notion database via Composio.",
+  "description": "Requires an Apify account (Apify MCP connected), the Composio MCP server connected to Notion, and your own Instagram cookies (docs/COOKIES.md) — just paste an Instagram URL and the skill walks you through anything missing on the first run. Scraping + transcription happens on Apify (no local installs at all — no ffmpeg, no Python venv, no WSL), then Claude extracts the real text and saves a clean, formatted row to your Notion database via Composio.",
   "author": { "name": "Riddhiman Bania" },
   "homepage": "https://github.com/riddhimaaan/instagram-ingest-apify",
   "repository": "https://github.com/riddhimaaan/instagram-ingest-apify",
