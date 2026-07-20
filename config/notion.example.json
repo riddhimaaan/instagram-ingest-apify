@@ -1,0 +1,5 @@
+{
+  "_comment": "Copy this file to config/notion.json and fill in YOUR values. See docs/NOTION.md.",
+  "account": "REPLACE_WITH_YOUR_COMPOSIO_NOTION_ACCOUNT",
+  "database_id": "REPLACE_WITH_YOUR_NOTION_DATABASE_ID"
+}

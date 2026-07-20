@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "instagram-ingest-apify",
+  "description": "Instagram → Notion ingest plugin for Claude Code. Scraping/transcription runs on Apify (no local installs); Claude extracts and writes to Notion via Composio.",
+  "owner": {
+    "name": "Riddhiman Bania",
+    "url": "https://github.com/riddhimaaan"
+  },
+  "plugins": [
+    {
+      "name": "instagram-ingest-apify",
+      "description": "Requires an Apify account (Apify MCP connected), the Composio MCP server connected to Notion, and your own Instagram cookies (docs/COOKIES.md) — /ig-setup walks you through all three. Give it an Instagram reel/post/carousel URL: the scraping + transcription happens on Apify (no local installs at all), then Claude extracts the real text and saves a clean, formatted row to your Notion database via Composio.",
+      "author": { "name": "Riddhiman Bania" },
+      "category": "productivity",
+      "source": "."
+    }
+  ]
+}

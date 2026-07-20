@@ -1,0 +1,8 @@
+# --- credentials & user config (never commit) ---
+config/notion.json
+
+# --- misc ---
+*.log
+__pycache__/
+*.pyc
+.DS_Store
