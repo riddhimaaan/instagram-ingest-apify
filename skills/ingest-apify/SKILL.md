@@ -1,5 +1,5 @@
 ---
-name: ig-ingest
+name: ingest-apify
 description: Download an Instagram reel, post, or carousel via the Apify Actor, analyze its full content, and store the extracted content in the user's Notion "Social Media Posts Link" database via Composio. Use whenever the user pastes an instagram.com URL and asks to save/ingest/analyze it, or asks to set up/configure this Instagram-to-Notion ingest.
 ---
 
