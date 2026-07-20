@@ -5,10 +5,10 @@ clean, formatted row in your **Notion** database — with **zero local installs*
 transcription run on [Apify](https://apify.com)'s cloud; Claude does the reading and writes
 to Notion via [Composio](https://composio.dev).
 
-No commands to remember — just paste a link:
+Paste a link and ask, or use the explicit command:
 
 ```
-Ingest this: https://www.instagram.com/reel/XXXXXXXXX/
+/ingest https://www.instagram.com/reel/XXXXXXXXX/
 ```
 
 > ### ⚠️ Before you install, you'll need three things
@@ -56,7 +56,7 @@ Ingest this: https://www.instagram.com/reel/XXXXXXXXX/
 **4. Point it at your Notion** → [`docs/NOTION.md`](docs/NOTION.md)
 (create the database, connect Notion in Composio, fill `config/notion.json`).
 
-**5. Paste an Instagram link** in Claude Code — the skill checks all of the above itself the
+**5. Run `/ingest <url>`** in Claude Code — the skill checks all of the above itself the
 first time it runs, and tells you what's still missing, if anything. 🎉
 
 ### Option B — Let your AI install it for you

@@ -74,12 +74,12 @@ There's no install script to run. Check conversationally:
 Fix anything that's a ✗ before continuing.
 
 ## Step 5 — First run
-There is no slash command to run — the plugin is a single skill (`ig-ingest`) that Claude
-invokes automatically whenever a message contains an instagram.com URL. Tell the user to just
-paste a link in Claude Code, e.g.:
+Tell the user to run, in Claude Code:
 ```
-Ingest this: https://www.instagram.com/reel/XXXXXXXXX/
+/ingest https://www.instagram.com/reel/XXXXXXXXX/
 ```
+(Pasting a bare instagram.com link and asking to ingest it also works — the plugin is a
+single skill that Claude invokes either way.)
 Expected result: one formatted row appears in their Notion database. Report the Notion page
 URL back to the user. This run happens on Apify's infrastructure and bills the user's own
 Apify account — see `docs/APIFY.md`'s cost note.
