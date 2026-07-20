@@ -8,7 +8,7 @@ to Notion via [Composio](https://composio.dev).
 Paste a link and ask, or use the explicit command:
 
 ```
-/ingest-apify https://www.instagram.com/reel/XXXXXXXXX/
+/ig-ingest-apify https://www.instagram.com/reel/XXXXXXXXX/
 ```
 
 > ### ⚠️ Before you install, you'll need three things
@@ -56,7 +56,7 @@ Paste a link and ask, or use the explicit command:
 **4. Point it at your Notion** → [`docs/NOTION.md`](docs/NOTION.md)
 (create the database, connect Notion in Composio, fill `config/notion.json`).
 
-**5. Run `/ingest-apify <url>`** in Claude Code — the skill checks all of the above itself the
+**5. Run `/ig-ingest-apify <url>`** in Claude Code — the skill checks all of the above itself the
 first time it runs, and tells you what's still missing, if anything. 🎉
 
 ### Option B — Let your AI install it for you
@@ -78,11 +78,11 @@ it connects Apify and Composio, then walks you through the two things only you c
 |---|---|---|
 | Download + transcribe | **Apify** (`industrial_nightfall/instagram-ingest-scraper`) | gallery-dl (yt-dlp fallback) downloads the media; faster-whisper transcribes any video — all inside one Apify Actor run |
 | Frames *(fallback)* | Apify | ffmpeg samples frames, only when a reel has no transcript |
-| Extract | *(the `ingest-apify` skill, local)* | Claude reads the transcript / materialized images and pulls the verbatim text |
+| Extract | *(the `ig-ingest-apify` skill, local)* | Claude reads the transcript / materialized images and pulls the verbatim text |
 | Save | Composio `NOTION_INSERT_ROW_DATABASE` | one formatted row: link in properties, content in the page body |
 
 This is a **single skill**, not a set of commands — the whole flow (first-time setup check,
-scrape, analyze, save) is one `skills/ingest-apify/SKILL.md` that Claude follows automatically
+scrape, analyze, save) is one `skills/ig-ingest-apify/SKILL.md` that Claude follows automatically
 whenever you paste an Instagram link.
 
 The Actor's source lives at [riddhimaaan/instagram-ingest-scraper](https://github.com/riddhimaaan/instagram-ingest-scraper)

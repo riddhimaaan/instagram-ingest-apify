@@ -76,7 +76,7 @@ Fix anything that's a ✗ before continuing.
 ## Step 5 — First run
 Tell the user to run, in Claude Code:
 ```
-/ingest-apify https://www.instagram.com/reel/XXXXXXXXX/
+/ig-ingest-apify https://www.instagram.com/reel/XXXXXXXXX/
 ```
 (Pasting a bare instagram.com link and asking to ingest it also works — the plugin is a
 single skill that Claude invokes either way.)
